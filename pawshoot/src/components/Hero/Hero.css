@@ -1,0 +1,93 @@
+#hero {
+  background-color: #555 !important;
+  height: 60vh;
+}
+
+#hero-title,
+.typewriter {
+  margin-bottom: 1rem !important;
+}
+
+#icon-links {
+  font-size: 100%;
+  margin-top: 2rem;
+}
+
+#icon-links a {
+  color: white;
+  text-decoration: underline !important;
+}
+
+.hero-display,
+.hero-display-2 {
+  position: absolute;
+  bottom: -3vh;
+}
+
+.hero-display {
+  right: 0;
+}
+
+.hero-display-2 {
+  left: 0;
+  transform: scaleX(-1);
+}
+
+.hero-img {
+  max-width: auto;
+  height: 25vh;
+}
+
+.typewriter h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.08rem;
+  animation: typing 4s steps(40, end);
+}
+
+.typewriter span.color-change {
+  animation: color-change 4.5s ease-in-out forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes color-change {
+  0% {
+    color: inherit; /* Start color (inherited) */
+  }
+  10% {
+    color: red; /* Color 1 */
+  }
+  20% {
+    color: orange;
+  }
+  30% {
+    color: yellow;
+  }
+  40% {
+    color: green;
+  }
+  50% {
+    color: blue;
+  }
+  60% {
+    color: indigo;
+  }
+  70% {
+    color: violet;
+  }
+  80% {
+    color: pink;
+  }
+  90% {
+    color: purple;
+  }
+  100% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+

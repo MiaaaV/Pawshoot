@@ -1,0 +1,41 @@
+#fullNavbar {
+  width: 60vw;
+}
+
+#nav-ionicon {
+  font-size: 2rem;
+}
+
+.nav-links {
+  flex-direction: column;
+}
+
+.nav-link {
+  font-size: 150% !important;
+  color: white !important;
+}
+
+@media screen and (min-width: 1920px) {
+
+  #fullNavbar {
+    width: 40vw;
+  }
+
+  .nav-links {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    font-size: 125% !important;
+    margin-left: 2rem;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  #fullNavbar {
+    display: none !important;
+  }
+
+}
