@@ -1,14 +1,13 @@
 import './Header.css';
-import './HeaderQueries.css';
 import logo from '../../images/logo.png';
-import MobileNavbar from './MobileNavbar/MobileNavbar';
-import FullNavbar from './Navbar/Navbar';
+import MobileNavbar from './Navbars/MobileNavbar/MobileNavbar';
+import FullNavbar from './Navbars/Navbar/Navbar';
 
 function Header() {
   return (
     <>
       <header>
-        <div className="px-3 py-2 text-bg-dark border-bottom">
+        <div className="px-3 py-2">
           <div className="container">
             <div className="d-flex align-items-center justify-content-between justify-content-lg-start">
 

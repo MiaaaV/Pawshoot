@@ -18,11 +18,11 @@
 @media screen and (min-width: 1920px) {
 
   #fullNavbar {
-    width: 40vw;
+    width: 40vw !important;
   }
 
   .nav-links {
-    flex-direction: row;
+    flex-direction: row !important;
   }
 
   .nav-link {

@@ -4,7 +4,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import logo from '../../../images/logo.png';
+import logo from '../../../../images/logo.png';
 
 function MobileNavbar() {
   const [show, setShow] = useState(false);
@@ -14,8 +14,10 @@ function MobileNavbar() {
 
   return (
     <>
-      <Navbar id="oc-navbar" bg="dark" variant="dark" expand="lg">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleShow} />
+      <Navbar id="oc-navbar" expand="lg">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleShow}>
+          <ion-icon id="toggler-icon" name="menu-outline" />
+        </Navbar.Toggle>
       </Navbar>
 
       <Offcanvas show={show} onHide={handleClose}>

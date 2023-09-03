@@ -1,5 +1,17 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+header div {
+  background-color: var(--primary);
+}
+
 .logo {
-  max-width: 30vw !important;
+  max-width: 20vw !important;
 }
 
 

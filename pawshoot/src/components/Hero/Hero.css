@@ -1,6 +1,18 @@
+@media screen and (max-width: 767px) {
+
+#hero-main {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('data:image/svg+xml,%3Csvg class="border shadow-md" viewBox="0 0 380.16 760.32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"%3E%3Crect class="bg" id="bg" x="0" y="0" width="380.16" height="760.32" fill="%2384a98c"%3E%3C/rect%3E%3Cg transform="rotate(29 190.08 380.16)"%3E%3Cpath d="M -380.16 570.32 S -200.08 404.32 0.00 570.32 180.08 536.32 380.16 570.32 560.24 509.32 760.32 570.32 862.48 544.32 1140.48 570.32 h 110 V 1360.3200000000002 H -380.16 Z" fill="%23354F52"%3E%3C/path%3E%3Cpath d="M -380.16 215.00 S -200.08 117.50 0.00 215.00 120.16 117.50 380.16 215.00 560.24 62.00 760.32 215.00 940.40 32.00 1140.48 215.00 h 110 V -600 H -380.16 Z" fill="%2352796F"%3E%3C/path%3E%3C/g%3E%3C/svg%3E');
+}
+
 #hero {
-  background-color: #555 !important;
-  height: 60vh;
+  top: 30vh;
+  background-color: transparent !important;
+}
+
 }
 
 #hero-title,
@@ -18,36 +30,16 @@
   text-decoration: underline !important;
 }
 
-.hero-display,
-.hero-display-2 {
-  position: absolute;
-  bottom: -3vh;
-}
-
-.hero-display {
-  right: 0;
-}
-
-.hero-display-2 {
-  left: 0;
-  transform: scaleX(-1);
-}
-
-.hero-img {
-  max-width: auto;
-  height: 25vh;
-}
-
 .typewriter h3 {
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.08rem;
-  animation: typing 4s steps(40, end);
+  animation: typing 3.5s steps(40, end);
 }
 
 .typewriter span.color-change {
-  animation: color-change 4.5s ease-in-out forwards;
+  animation: color-change 4s ease-in-out forwards;
 }
 
 @keyframes typing {
@@ -57,37 +49,12 @@
 
 @keyframes color-change {
   0% {
-    color: inherit; /* Start color (inherited) */
-  }
-  10% {
-    color: red; /* Color 1 */
+    color: inherit;
   }
   20% {
-    color: orange;
+    color: var(--off-white);
   }
-  30% {
-    color: yellow;
-  }
-  40% {
-    color: green;
-  }
-  50% {
-    color: blue;
-  }
-  60% {
-    color: indigo;
-  }
-  70% {
-    color: violet;
-  }
-  80% {
-    color: pink;
-  }
-  90% {
-    color: purple;
-  }
-  100% {
-    color: rgba(255, 255, 255, 0.5);
+  30%, 100% {
+    color: #6d787e;
   }
 }
-

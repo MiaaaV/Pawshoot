@@ -1,3 +1,22 @@
+:root {
+  --primary: #212b31;
+  --secondary: #354f52;
+  --third: #2f3e46;
+  --light: #84a98c;
+  --second-light: #52796F;
+  --off-white: #eeeeee;
+
+}
+
 html {
-  background-color: #333;
+  background-color: var(--off-white) !important;
+}
+
+h1, p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2, h3, a {
+  font-family: 'Lora', serif;
+  font-weight: 400;
 }

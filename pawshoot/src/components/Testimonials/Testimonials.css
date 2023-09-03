@@ -1,0 +1,12 @@
+.testimonials {
+  background-color: #555;
+}
+
+#tm-img {
+  width: 30vw;
+}
+
+.card-text {
+  text-align: justify;
+  font-size: 0.8rem !important;
+}
