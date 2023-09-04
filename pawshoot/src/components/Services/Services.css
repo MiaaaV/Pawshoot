@@ -10,6 +10,10 @@
   margin-top: calc(-1 * var(--bs-gutter-y));
 }
 
+#service-img {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
 .btn.btn-primary {
   background-color: var(--secondary);
   border: none !important;

@@ -34,7 +34,7 @@ function Services() {
                 <p className="lead">{service.description}</p>
               </div>
               <div className="bg-body-tertiary shadow-sm mx-auto">
-                <img src={service.image} alt={service.title} className="img-fluid full-width-image" />
+                <img id='service-img' src={service.image} alt={service.title} className="img-fluid full-width-image" />
               </div>
               {index === services.length - 1 ? (
                 <div className="text-center my-3 py-3">

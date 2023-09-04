@@ -1,80 +1,93 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 import './Testimonials.css';
-import person1 from './images/testimonial-1.jpg'
-import person2 from './images/testimonial-2.jpg'
-import person3 from './images/testimonial-3.jpg'
+
+const testimonials = [
+  {
+    id: 1,
+    name: 'John Doe',
+    text: 'Pawshoot exceeded my expectations! They captured the true essence of my pet and delivered absolutely stunning photos.',
+  },
+  {
+    id: 2,
+    name: 'Jane Smith',
+    text: 'I couldn\'t be happier with the photos of my fur babies. Pawshoot truly understands the bond between pets and their owners.',
+  },
+  {
+    id: 3,
+    name: 'Bob Johnson',
+    text: 'The professionalism and creativity of Pawshoot Photography are unparalleled. I highly recommend their services for pet lovers!',
+  },
+  {
+    id: 4,
+    name: 'Alice Brown',
+    text: 'The team at Pawshoot made the entire photo session a joyful experience. They have a genuine love for pets, and it shows in their work.',
+  },
+  {
+    id: 5,
+    name: 'Ella Davis',
+    text: 'Pawshoot\'s attention to detail is exceptional. They capture the unique personality of each pet, resulting in beautiful and heartwarming photos.',
+  },
+  {
+    id: 6,
+    name: 'Sam Wilson',
+    text: 'I was amazed by the creativity and dedication of the Pawshoot team. They go above and beyond to create memorable pet portraits.'
+  },
+];
 
 function Testimonials() {
-  const testimonials = [
-    {
-      name: 'Petra Shepherd',
-      quote: 'Pawshoot exceeded my expectations! They captured the true essence of my pet and delivered stunning photos. I already booked another time.',
-      image: person1,
-    },
-    {
-      name: 'Richard Burkley',
-      quote: 'I couldn\'t be happier with the photos of my fur babies. Pawshoot truly understands the bond between pets and their owners.',
-      image: person2,
-    },
-    {
-      name: 'David Wilson',
-      quote: 'The professionalism and creativity of Pawshoot Photography are unparalleled. I highly recommend their services for pet lovers!',
-      image: person3,
-    },
-  ];
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
+  const [testimonialsGroups, setTestimonialsGroups] = useState([]);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 767);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const updatedGroups = [];
+    for (let i = 0; i < testimonials.length; i += (isMobile ? 1 : 3)) {
+      const group = testimonials.slice(i, i + (isMobile ? 1 : 3));
+      updatedGroups.push(group);
+    }
+    setTestimonialsGroups(updatedGroups);
+  }, [isMobile]);
 
   return (
-    <section className="testimonials container py-5">
-      <h2 className="text-center mb-4">What Our Clients Say</h2>
-      <div id="testimonialCarousel" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className={`carousel-item ${index === 0 ? 'active' : ''}`}
-            >
-              <div className="row justify-content-center">
-                <div className="col-lg-4">
-                  <div className="card h-100">
-                    <div className="card-body text-center">
-                      <img
-                        id='tm-img'
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="img-fluid rounded-circle mb-3"
-                      />
-                      <h5 className="card-title">{testimonial.name}</h5>
-                      <p className="card-text">{testimonial.quote}</p>
+    <>
+      <section id='testimonials' className='pt-3 pb-3'>
+        <div className="container text-center mt-2 mb-2">
+          <h2>My customers are the cornerstone of my success</h2>
+          <p>Feedback directly from fellow pet owners</p>
+          <hr />
+          <Carousel interval={null} controls={true} pause={false}>
+            {testimonialsGroups.map((group, index) => (
+              <Carousel.Item key={index}>
+                <div className="row testimonials-row">
+                  {group.map((testimonial) => (
+                    <div key={testimonial.id} className="col-md-4">
+                      <div className="testimonial">
+                        <p>{testimonial.text}</p>
+                        <p>
+                          <strong>{testimonial.name}</strong>
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
-              </div>
-            </div>
-          ))}
+              </Carousel.Item>
+            ))}
+          </Carousel>
         </div>
-
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#testimonialCarousel"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#testimonialCarousel"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
