@@ -14,12 +14,13 @@ section.featured-in {
   max-width: auto;
   max-height: 4vh;
   filter: brightness(0);
-  opacity: 20%;
+  opacity: 10%;
 }
 
 @media screen and (min-width: 768px) {
 
   section.featured-in {
+    background-color: var(--off-white);
     padding: 1rem 0 !important;
   }
 
@@ -36,7 +37,6 @@ section.featured-in {
 @media screen and (min-width: 1920px) {
 
   section.featured-in {
-    background-color: var(--off-white);
     padding: 2rem 0 !important;
   }
 

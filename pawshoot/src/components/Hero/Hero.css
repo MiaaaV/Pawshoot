@@ -26,8 +26,12 @@
 }
 
 #icon-links a {
-  color: white;
+  color: var(--secondary);
   text-decoration: underline !important;
+}
+
+#icon-links a:hover {
+  color: var(--second-light);
 }
 
 .typewriter h3 {
@@ -48,13 +52,16 @@
 }
 
 @keyframes color-change {
-  0% {
-    color: inherit;
+  10% {
+    color: var(--second-light);
   }
-  20% {
+  30% {
     color: var(--off-white);
   }
-  30%, 100% {
-    color: #6d787e;
+  40% {
+    color: var(--light);
+  }
+  50%, 100% {
+    color: var(--off-white);
   }
 }

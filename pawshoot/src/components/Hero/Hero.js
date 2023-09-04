@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
 import './HeroQuery.css';
+import { NavLink } from 'react-router-dom';
 import img1 from './images/hero-img-1.png';
 import img2 from './images/hero-img-2.png';
 
@@ -31,12 +32,9 @@ function Hero() {
             </div>
 
             <div id='icon-links' className="d-flex gap-3 justify-content-center lead fw-normal">
-              <a className="icon-link text-decoration-none" href="/">
-                Booking
-              </a>
-              <a className="icon-link text-decoration-none" href="/">
-                Read more
-              </a>
+              <NavLink to="/contact" className="icon-link text-decoration-none" href="/">
+                Book now
+              </NavLink>
             </div>
           </div>
 

@@ -23,6 +23,11 @@
   letter-spacing: 0.1rem;
 }
 
+#navlink {
+  color: var(--off-white);
+  text-decoration: none;
+}
+
 #service-link {
   color: var(--light);
 }

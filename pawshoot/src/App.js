@@ -1,22 +1,20 @@
 import './App.css';
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import Services from './components/Services/Services';
-import Footer from './components/Footer/Footer';
-import Accordion from './components/FAQ/FAQ';
-import Testimonials from './components/Testimonials/Testimonials';
-import Featured from './components/Featured/Featured';
+import React from 'react';
+import { Route, Routes } from "react-router-dom";
+import Home from './routes/Home';
+import Gallery from './routes/Gallery';
+import About from './routes/About';
+import Contact from './routes/Contact';
 
 function App() {
   return (
     <>
-      <Header />
-      <Hero />
-      <Featured />
-      <Services />
-      <Testimonials />
-      <Accordion />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/gallery' element={<Gallery />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
     </>
   );
 }

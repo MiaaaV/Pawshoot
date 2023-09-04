@@ -1,4 +1,5 @@
 import './Navbar.css';
+import { NavLink } from 'react-router-dom';
 
 function FullNavbar() {
   return (
@@ -6,26 +7,26 @@ function FullNavbar() {
       <nav id='fullNavbar' className='d-flex align-items-center justify-content-between'>
         <ul className="nav justify-content-center">
           <li className="nav-item">
-            <a className="nav-link" href="/">Gallery</a>
+            <NavLink to="/gallery" className="nav-link">Gallery</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/">About</a>
+            <NavLink to="/about" className="nav-link">About</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/">Contact</a>
+            <NavLink to="/contact" className="nav-link">Contact</NavLink>
           </li>
         </ul>
 
         <div className='d-flex nav-links'>
-          <a className="nav-link mt-2" href="/">
+          <NavLink to="/" className="nav-link mt-2">
             <ion-icon id="nav-ionicon" name="logo-facebook" />
-          </a>
-          <a className="nav-link mt-2" href="/">
+          </NavLink>
+          <NavLink to="/" className="nav-link mt-2">
             <ion-icon id="nav-ionicon" name="logo-instagram" />
-          </a>
-          <a className="nav-link mt-2" href="/">
+          </NavLink>
+          <NavLink to="/" className="nav-link mt-2">
             <ion-icon id="nav-ionicon" name="logo-twitter" />
-          </a>
+          </NavLink>
         </div>
       </nav>
     </>

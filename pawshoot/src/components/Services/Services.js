@@ -3,6 +3,7 @@ import './Services.css';
 import portrait from './images/pet-portrait.jpg';
 import event from './images/pet-event.jpg';
 import custom from './images/pet-custom.jpg';
+import { NavLink } from 'react-router-dom';
 
 function Services() {
   const services = [
@@ -38,8 +39,10 @@ function Services() {
               </div>
               {index === services.length - 1 ? (
                 <div className="text-center my-3 py-3">
-                  <button className="btn btn-primary">Book now</button>
-                  <p className='service-link'>or see <a id='service-link' href='/'>pricing</a></p>
+                  <button className="btn btn-primary">
+                    <NavLink id="navlink" to="/contact">Book now</NavLink>
+                  </button>
+                  <p className='service-link'>or see <NavLink id='service-link'>pricing</NavLink></p>
                 </div>
               ) : null}
             </div>
