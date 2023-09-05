@@ -16,14 +16,16 @@ const ContactForm = () => {
                 <input
                   type="text"
                   id="name"
-                  name="name" />
+                  name="name"
+                  autoComplete='none' />
               </div>
               <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input
                   type="email"
                   id="email"
-                  name="email" />
+                  name="email"
+                  autoComplete='none' />
               </div>
               <div className="form-group">
                 <label htmlFor="message">Message</label>

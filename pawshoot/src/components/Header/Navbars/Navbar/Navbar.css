@@ -1,3 +1,7 @@
+.activeNav {
+  text-decoration: underline !important;
+}
+
 #fullNavbar {
   width: 60vw;
 }
@@ -15,10 +19,19 @@
   color: white !important;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (max-width: 768px) {
 
   #fullNavbar {
-    width: 40vw !important;
+    display: none !important;
+  }
+
+}
+
+@media screen and (min-width: 960px) {
+
+  #fullNavbar {
+    display: flex;
+    width: 65vw;
   }
 
   .nav-links {
@@ -32,10 +45,18 @@
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1920px) {
 
   #fullNavbar {
-    display: none !important;
+    width: 45vw !important;
+  }
+
+}
+
+@media screen and (min-width: 2560px) {
+
+  #fullNavbar {
+    width: 35vw !important;
   }
 
 }

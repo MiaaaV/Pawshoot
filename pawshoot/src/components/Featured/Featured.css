@@ -53,3 +53,15 @@ section.featured-in {
   }
 
 }
+
+@media screen and (min-width: 2560px) {
+
+  .logos {
+    margin: 0;
+  }
+
+  .logos img {
+    max-height: 3vh;
+  }
+
+}

@@ -3,7 +3,7 @@
 #hero-main {
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   background-image: url('data:image/svg+xml,%3Csvg class="border shadow-md" viewBox="0 0 380.16 760.32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"%3E%3Crect class="bg" id="bg" x="0" y="0" width="380.16" height="760.32" fill="%2384a98c"%3E%3C/rect%3E%3Cg transform="rotate(29 190.08 380.16)"%3E%3Cpath d="M -380.16 570.32 S -200.08 404.32 0.00 570.32 180.08 536.32 380.16 570.32 560.24 509.32 760.32 570.32 862.48 544.32 1140.48 570.32 h 110 V 1360.3200000000002 H -380.16 Z" fill="%23354F52"%3E%3C/path%3E%3Cpath d="M -380.16 215.00 S -200.08 117.50 0.00 215.00 120.16 117.50 380.16 215.00 560.24 62.00 760.32 215.00 940.40 32.00 1140.48 215.00 h 110 V -600 H -380.16 Z" fill="%2352796F"%3E%3C/path%3E%3C/g%3E%3C/svg%3E');
 }
@@ -55,10 +55,7 @@
   10% {
     color: var(--second-light);
   }
-  30% {
-    color: var(--off-white);
-  }
-  40% {
+  20% {
     color: var(--light);
   }
   50%, 100% {

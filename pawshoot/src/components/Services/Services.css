@@ -23,6 +23,11 @@
   letter-spacing: 0.1rem;
 }
 
+.btn.btn-primary:hover,
+.btn.btn-primary:active {
+  background-color: var(--third) !important;
+}
+
 #navlink {
   color: var(--off-white);
   text-decoration: none;

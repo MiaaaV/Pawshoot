@@ -33,11 +33,11 @@ input[type="text"],
 input[type="email"],
 textarea {
   border: none;
-  background-color: var(--light);
-  opacity: 0.3;
+  background-color: var(--off-white);
+  opacity: 0.9;
   width: 100%;
   padding: 10px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--secondary);
   font-size: 16px;
   margin-top: 5px;
 }
@@ -46,7 +46,7 @@ input[type="text"]:focus-visible,
 input[type="email"]:focus-visible,
 textarea:focus-visible {
   outline: none;
-  border-inline: 5px solid white;
+  border-inline: 5px solid var(--light);
 }
 
 .submit-button {

@@ -40,9 +40,9 @@ function Services() {
               {index === services.length - 1 ? (
                 <div className="text-center my-3 py-3">
                   <button className="btn btn-primary">
-                    <NavLink id="navlink" to="/contact">Book now</NavLink>
+                    <NavLink id="navlink" to="/contact#contact">Book now</NavLink>
                   </button>
-                  <p className='service-link'>or see <NavLink id='service-link'>pricing</NavLink></p>
+                  <p className='service-link'>or see <NavLink to="/contact" id='service-link'>pricing</NavLink></p>
                 </div>
               ) : null}
             </div>

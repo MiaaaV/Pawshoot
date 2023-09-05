@@ -67,7 +67,7 @@ button:focus:not(:focus-visible) {
   color: var(--secondary) !important;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 960px) {
 
   #oc-navbar {
     display: none;

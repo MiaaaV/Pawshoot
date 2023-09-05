@@ -17,6 +17,9 @@ function AboutMe() {
               <p>
                 Suspendisse vel arcu eget libero varius efficitur. Fusce eu justo nec nisi condimentum posuere. Fusce eu felis nec orci laoreet auctor id in dui. Vivamus eget leo vitae arcu efficitur convallis. Curabitur semper, sem a fringilla tincidunt, arcu tortor aliquam tortor, sit amet tristique ex odio et ex. Vestibulum interdum purus quis nunc lacinia, id tincidunt turpis pharetra. Nulla facilisi. Nullam varius volutpat justo at ullamcorper. Nulla at bibendum velit.
               </p>
+              <div className='hr mt-5'>
+                <hr />
+              </div>
               <h2 className='mt-5'>Credentials</h2>
               <ul>
                 <li>Lorem ipsum dolor sit amet</li>
@@ -35,11 +38,11 @@ function AboutMe() {
                 alt="Pawshoot's owner"
                 className="rounded-circle"
               />
-              <h2 className='mt-5'>Photography Equipment</h2>
+              <h2 className='mt-5 about-h2'>Photography Equipment</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget metus vel dui rhoncus commodo vitae at nulla. Sed convallis metus nec ullamcorper sodales. Fusce quis nulla urna.
               </p>
-              <h2 className='mt-5'>Achievements</h2>
+              <h2 className='mt-5 about-h2'>Achievements</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac dolor nec sem sodales rhoncus. Cras vitae sem et ligula venenatis scelerisque. Fusce eu justo nec nisi condimentum posuere.
               </p>
