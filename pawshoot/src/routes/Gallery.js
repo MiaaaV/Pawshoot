@@ -1,13 +1,13 @@
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import FAQAccordion from "../components/FAQ/FAQ";
+import Album from "../components/tabs/Gallery/Gallery";
 
 function Gallery() {
 
   return (
     <>
       <Header />
-      <FAQAccordion />
+      <Album />
       <Footer />
     </>
   )

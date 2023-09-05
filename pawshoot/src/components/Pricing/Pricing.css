@@ -1,0 +1,68 @@
+#pricing {
+  background-color: var(--off-white);
+  margin-top: 20vh;
+}
+
+.pricing-heading {
+  padding: 1rem;
+  font-size: 1rem;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.pricing-container {
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pricing-column {
+  border-right: none;
+  margin-bottom: 1rem;
+}
+
+.pricing-column {
+  flex: 1;
+  border-bottom: 2px solid var(--secondary);
+  text-align: center;
+}
+
+.pricing-card {
+  padding: 0.5rem;
+}
+
+.price-h2 {
+  background-color: var(--light);
+}
+
+.pricing-list {
+  list-style: none;
+  padding: 0;
+}
+
+.price-img-container {
+  display: none;
+}
+
+.price-img-col {
+  display: none;
+}
+
+span.vr {
+  display: none;
+}
+
+#price {
+  font-size: 4vh;
+  color: var(--secondary);
+}
+
+.price-custom {
+  text-transform: uppercase;
+  opacity: 0.5;
+  color: var(--secondary);
+  letter-spacing: 0.3rem;
+}

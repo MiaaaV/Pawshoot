@@ -1,0 +1,55 @@
+#about-me {
+  background-color: var(--off-white);
+  margin-top: 20vh;
+}
+
+.rounded-circle {
+  max-width: 50vw;
+}
+
+#about-dog {
+  max-width: 100vw;
+}
+
+#about-dog-dt {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+  #about-me {
+    margin-top: 15vh;
+  }
+
+  .rounded-circle {
+    max-width: 30vw;
+  }
+
+  #about-dog {
+    display: flex;
+    max-width: 100vw;
+  }
+  
+}
+
+@media screen and (min-width: 1920px) {
+
+  #about-me {
+    padding: 1vh 0 10vh 0;
+  }
+
+  .rounded-circle {
+    max-width: 20vw;
+  }
+
+  #about-dog {
+   display: none;
+  }
+  
+  #about-dog-dt {
+    display: block;
+    max-width: 30vw;
+    border-radius: 10px;
+  }
+  
+}

@@ -1,0 +1,66 @@
+#contact {
+  background-color: var(--second-light);
+}
+
+.contact-form-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-content {
+  padding-top: 2rem;
+  text-align: left;
+}
+
+.form-content h2,
+.form-content p,
+.form-group {
+  padding: 0 1rem !important;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin: 0.5rem 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: none;
+  background-color: var(--light);
+  opacity: 0.3;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid black;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-inline: 5px solid white;
+}
+
+.submit-button {
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.photo-container {
+  height: 30vh;
+  background-image: url('https://images.pexels.com/photos/3804415/pexels-photo-3804415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-position: center;
+  background-repeat: no-repeat;
+}

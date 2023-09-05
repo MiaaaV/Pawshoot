@@ -1,71 +1,89 @@
 import React from 'react';
 import './Pricing.css';
+import './PricingQuery.css';
+import basic from './images/basic.jpg';
+import standard from './images/standard.jpg';
+import premium from './images/premium.jpg';
+
+const priceImgs = [
+  {
+    img: basic,
+    alt: 'alt text'
+  },
+  {
+    img: standard,
+    alt: 'alt text'
+  },
+  {
+    img: premium,
+    alt: 'alt text'
+  }
+]
 
 function Pricing() {
+
   return (
-    <main>
-      <h5>Pricing</h5>
-      <h2>Two simple packages</h2>
-      <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
-        {/* Free Plan */}
-        <div className="col">
-          <div className="card mb-4 rounded-3 shadow-sm">
-            <div className="card-header py-3">
-              <h4 className="my-0 fw-normal">Free</h4>
-            </div>
-            <div className="card-body">
-              <h1 className="card-title pricing-card-title">100€<small className="text-body-secondary fw-light">/mo</small></h1>
-              <ul className="list-unstyled mt-3 mb-4">
-                <li>10 users included</li>
-                <li>2 GB of storage</li>
-                <li>Email support</li>
-                <li>Help center access</li>
+    <>
+      <main id='pricing'>
+        <div className='pricing-heading-div'>
+          <h2 className="pricing-heading mb-3">Pricing Guide</h2>
+        </div>
+        <div className="pricing-container">
+          <span className='vr' />
+          <div className="pricing-column">
+            <div className="pricing-card">
+              <h2 className='price-h2'>Basic</h2>
+              <ul className='pricing-list'>
+                <li>Studio or Outdoor</li>
+                <li>60 minute session</li>
+                <li>15 high-resolution photos</li>
+                <li>&nbsp;&nbsp;&nbsp;Basic editing included &nbsp;&nbsp;&nbsp;</li>
               </ul>
-              <button type="button" className="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+              <h2 id='price'>$100</h2>
             </div>
           </div>
+          <span className='vr' />
+          <div className="pricing-column">
+            <div className="pricing-card">
+              <h2 className='price-h2'>Standard</h2>
+              <ul className='pricing-list'>
+                <li>Location of your choice</li>
+                <li>120 minute session</li>
+                <li>30 high-resolution photos</li>
+                <li>Standard editing included</li>
+              </ul>
+              <h2 id='price'>$200</h2>
+            </div>
+          </div>
+          <span className='vr' />
+          <div className="pricing-column">
+            <div className="pricing-card">
+              <h2 className='price-h2'>Premium</h2>
+              <ul className='pricing-list'>
+                <li>Multiple locations</li>
+                <li>Full day coverage</li>
+                <li>100 high-resolution photos</li>
+                <li>Premium editing included</li>
+              </ul>
+              <h2 id='price'>$500</h2>
+            </div>
+          </div>
+          <span className='vr' />
         </div>
 
-        {/* Pro Plan */}
-        <div className="col">
-          <div className="card mb-4 rounded-3 shadow-sm">
-            <div className="card-header py-3">
-              <h4 className="my-0 fw-normal">Pro</h4>
-            </div>
-            <div className="card-body">
-              <h1 className="card-title pricing-card-title">$15<small className="text-body-secondary fw-light">/mo</small></h1>
-              <ul className="list-unstyled mt-3 mb-4">
-                <li>20 users included</li>
-                <li>10 GB of storage</li>
-                <li>Priority email support</li>
-                <li>Help center access</li>
-              </ul>
-              <button type="button" className="w-100 btn btn-lg btn-primary">Get started</button>
-            </div>
+        <div className="price-img-container mt-4">
+          <div className='price-img-col'>
+            {priceImgs.map((item, index) => (
+              <div key={index}>
+                <img className='price-img' alt={item.alt} src={item.img} />
+              </div>
+            ))}
           </div>
         </div>
-
-        {/* Enterprise Plan */}
-        <div className="col">
-          <div className="card mb-4 rounded-3 shadow-sm border-primary">
-            <div className="card-header py-3 text-bg-primary border-primary">
-              <h4 className="my-0 fw-normal">Enterprise</h4>
-            </div>
-            <div className="card-body">
-              <h1 className="card-title pricing-card-title">$29<small className="text-body-secondary fw-light">/mo</small></h1>
-              <ul className="list-unstyled mt-3 mb-4">
-                <li>30 users included</li>
-                <li>15 GB of storage</li>
-                <li>Phone and email support</li>
-                <li>Help center access</li>
-              </ul>
-              <button type="button" className="w-100 btn btn-lg btn-primary">Contact us</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+        <h2 className='text-center m-0 pb-5 price-custom'>Get in touch for custom solutions</h2>
+      </main>
+    </>
   );
-}
+};
 
 export default Pricing;

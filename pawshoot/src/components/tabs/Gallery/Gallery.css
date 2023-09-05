@@ -1,0 +1,46 @@
+#album {
+  margin-top: 15vh;
+  background-color: var(--off-white) !important;
+}
+
+#album-fig {
+  margin-bottom: 0;
+}
+
+.gallery-col {
+  padding: 0 !important;
+}
+
+.gallery-item {
+  overflow: hidden !important;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+
+  #album {
+    margin-top: 15vh;
+    margin-bottom: 2vh;
+  }
+
+}
+
+@media screen and (min-width: 1920px) {
+
+  #album {
+    width: 80%;
+    margin-top: 10vh;
+    margin-bottom: 0;
+    background-color: var(--secondary) !important;
+  }
+
+}

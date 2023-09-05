@@ -1,0 +1,50 @@
+@media screen and (min-width: 768px) {
+
+  .form-content {
+    margin: 0 auto;
+    font-size: 1.2vh;
+  }
+
+  .submit-button {
+    margin: 1rem;
+  }
+
+  .photo-container {
+    display: none;
+  }
+
+  .submit-button {
+    border-radius: 3px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+
+  .contact-form-container {
+    width: 60vw;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .form-content {
+    font-size: 1.5vh;
+  }
+
+  .submit-button {
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  .submit-button:hover {
+    background-color: var(--third);
+    color: var(--off-white);
+  }
+
+  .photo-container {
+    display: block;
+    height: 62vh;
+  }
+
+}
