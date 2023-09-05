@@ -5,7 +5,18 @@ footer {
   padding: 2rem 0 !important;
 }
 
+footer p,
+footer ion-icon {
+  opacity: 0.25;
+}
+
 .foo-div {
   display: flex;
   gap: 5rem;
+}
+@media screen and (max-width: 767px) {
+  
+  #copyright {
+    margin-top: 1rem !important;
+  }
 }

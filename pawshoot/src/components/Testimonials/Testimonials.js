@@ -37,12 +37,12 @@ const testimonials = [
 
 function Testimonials() {
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 959);
   const [testimonialsGroups, setTestimonialsGroups] = useState([]);
 
   useEffect(() => {
     function handleResize() {
-      setIsMobile(window.innerWidth <= 767);
+      setIsMobile(window.innerWidth <= 959);
     }
 
     window.addEventListener('resize', handleResize);
@@ -72,12 +72,14 @@ function Testimonials() {
               <Carousel.Item key={index}>
                 <div className="row testimonials-row">
                   {group.map((testimonial) => (
-                    <div key={testimonial.id} className="col-md-4">
-                      <div className="testimonial">
-                        <p>{testimonial.text}</p>
-                        <p>
-                          <strong>{testimonial.name}</strong>
-                        </p>
+                    <div key={testimonial.id} className="test-map col-md-4">
+                      <div className="testimonial d-flex flex-column justify-content-center">
+                        <div>
+                          <p className='m-2'>{testimonial.text}</p>
+                          <div className='d-flex test-name'>
+                            <strong>&ndash; {testimonial.name}</strong>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ))}

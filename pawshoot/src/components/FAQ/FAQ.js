@@ -41,7 +41,7 @@ function FAQAccordion() {
                 <h2 className="mb-4 text-center">Frequently asked</h2>
                 {faqs.map((faq, index) => (
                   <div key={index} className={`accordion ${index === activeIndex ? 'show' : ''}`}>
-                    <div className="accordion-item">
+                    <div className="">
                       <h2 className="accordion-header">
                         <button
                           className={`accordion-button ${index === activeIndex ? '' : 'collapsed'}`}
@@ -66,3 +66,34 @@ function FAQAccordion() {
 }
 
 export default FAQAccordion;
+
+/**
+ * <section id='faq'>
+        <div className="container">
+          <div className="row test justify-content-center">
+            <div className="faq-col col-md-8">
+              <div className="faq-accordion">
+                <h2 className="mb-4 text-center">Frequently asked</h2>
+                {faqs.map((faq, index) => (
+                  <div key={index} className={`accordion ${index === activeIndex ? 'show' : ''}`}>
+                    <div className="accordion-item">
+                      <h2 className="accordion-header">
+                        <button
+                          className={`accordion-button ${index === activeIndex ? '' : 'collapsed'}`}
+                          type="button"
+                          onClick={() => toggleAccordion(index)}>
+                          {faq.question}
+                        </button>
+                      </h2>
+                      <div className={`accordion-collapse collapse ${index === activeIndex ? 'show' : ''}`}>
+                        <div className="accordion-body">{faq.answer}</div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+ */

@@ -20,7 +20,7 @@ function Footer() {
               </div>
             </div>
             <div className='col-md-6 col-12'>
-              <p className='m-0'>&copy; 2023 PawshootPhotography</p>
+              <p id='copyright' className='m-0'>&copy; 2023 PawshootPhotography</p>
             </div>
           </div>
         </div>

@@ -9,38 +9,52 @@ section#faq {
 }
 
 .accordion-button {
-  background-color: var(--secondary) !important;
-  color: var(--off-white) !important;
-  border: none;
+  background-color: rgb(206, 212, 206) !important;
+  border-top: 2px solid var(--secondary) !important;
   border-radius: 0 !important;
   padding: 1rem;
   margin: 0 !important;
   text-align: left;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .accordion-button:hover {
   background-color: var(--third) !important;
+  color: var(--off-white);
+  box-shadow: none !important;
 }
 
 .accordion-button:focus {
-  border-color: black !important;
-  box-shadow: 0 4px 6px rgba(53, 79, 82, 0.2) !important;
+  box-shadow: none !important;
 }
 
 .accordion-button:not(.collapsed) {
+  color: var(--off-white) !important;
   background-color: var(--third) !important;
+  box-shadow: none !important;
 }
 
 .accordion-button:not(.collapsed)::after {
   background-image: var(--bs-accordion-btn-icon) !important;
 }
 
+.accordion-body {
+  background-color: #dddddd;
+}
 @media screen and (min-width: 768px) {
 
   #faq {
-    padding: 2rem 0;
+    padding-top: 2rem;
+  }
+
+  .accordion-button,
+  .accordion-body {
+    border-inline: 2px solid var(--secondary) !important;
+  }
+
+  .accordion-body {
+    border-top: 2px solid var(--secondary) !important;
   }
 
 }

@@ -32,24 +32,24 @@ function MobileNavbar() {
 
           <Nav id="oc-nav" className='d-flex align-items-center'>
             <NavLink to="/gallery" id='oc-nav-link'>Gallery</NavLink>
-            <NavLink href="/about" id='oc-nav-link'>About</NavLink>
-            <NavLink href="/contact" id='oc-nav-link'>Contact</NavLink>
+            <NavLink to="/about" id='oc-nav-link'>About</NavLink>
+            <NavLink to="/contact" id='oc-nav-link'>Contact</NavLink>
 
-            <ul className='d-flex list-unstyled mt-5'>
+            <ul className='d-flex list-unstyled mt-5 gap-3'>
               <li>
-                <Nav.Link href="/">
+                <NavLink to="/">
                   <ion-icon id="oc-ionicon" name="logo-facebook" />
-                </Nav.Link>
+                </NavLink>
               </li>
               <li>
-                <Nav.Link href="/gallery">
+                <NavLink to="/gallery">
                   <ion-icon id="oc-ionicon" name="logo-instagram" />
-                </Nav.Link>
+                </NavLink>
               </li>
               <li>
-                <Nav.Link href="/">
+                <NavLink to="/">
                   <ion-icon id="oc-ionicon" name="logo-twitter" />
-                </Nav.Link>
+                </NavLink>
               </li>
             </ul>
           </Nav>
